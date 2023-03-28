@@ -23,7 +23,7 @@
         font-size: 20px;
         margin: 0 5px;
         border: none;
-        border-radius: 5px;
+        border-radius: 10px;
         background-color: #fff;
         box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
         cursor: pointer;
@@ -78,37 +78,40 @@
         <p class="text" id="typing"></p>
         <div>
             <div class = "container">
-                <button onclick="add(7);">7</button>
-                <button onclick="add(8);">8</button>
-                <button onclick="add(9);">9</button>
-                <button onclick="add('/');">÷</button>
-                <button onclick="remove()">🡠</button>
-                <button onclick="clearText();">C</button>
+                <button onclick="baseCalculator.add(7);">7</button>
+                <button onclick="baseCalculator.add(8);">8</button>
+                <button onclick="baseCalculator.add(9);">9</button>
+                <button onclick="baseCalculator.add('/');">÷</button>
+                <button onclick="baseCalculator.remove()">🡠</button>
+                <button onclick="baseCalculator.clearText();">C</button>
             </div>
             <div class = "container">
-                <button onclick="add(4);">4</button>
-                <button onclick="add(5);">5</button>
-                <button onclick="add(6);">6</button>
-                <button onclick="add('*');">×</button>
-                <button onclick="add('(');">(</button>
-                <button onclick="add(')');">)</button>
+                <button onclick="baseCalculator.add(4);">4</button>
+                <button onclick="baseCalculator.add(5);">5</button>
+                <button onclick="baseCalculator.add(6);">6</button>
+                <button onclick="baseCalculator.add('*');">×</button>
+                <button onclick="baseCalculator.add('(');">(</button>
+                <button onclick="baseCalculator.add(')');">)</button>
             </div>
             <div class = "container">
-                <button onclick="add(1);">1</button>
-                <button onclick="add(2);">2</button>
-                <button onclick="add(3);">3</button>
-                <button onclick="add('-');">-</button>
+                <button onclick="baseCalculator.add(1);">1</button>
+                <button onclick="baseCalculator.add(2);">2</button>
+                <button onclick="baseCalculator.add(3);">3</button>
+                <button onclick="baseCalculator.add('-');">-</button>
                 <button style="visibility :hidden"></button>
                 <button style="visibility :hidden"></button>
             </div>
             <div class = "container">
-                <button onclick="add(0);">0</button>
-                <button onclick="add('.');">,</button>
-                <button onclick="add('%');">%</button>
-                <button onclick="add('+');">+</button>
-                <button id="equal" onclick="calculate()">=</button>
+                <button onclick="baseCalculator.add(0);">0</button>
+                <button onclick="baseCalculator.add('.');">,</button>
+                <button onclick="baseCalculator.add('%');">%</button>
+                <button onclick="baseCalculator.add('+');">+</button>
+                <button id="equal" onclick="baseCalculator.calculate()">=</button>
             </div>
         </div>
     </div>
+    <script>
+        let baseCalculator = new BaseCalculator();
+    </script>
 </body>
 </html>
