@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice</title>
+    <script src="calculatrice.js"></script> 
+    <style>
+    h1 {
+        text-align: center;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        margin: 10px 0;
+    }
+
+    button {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        margin: 0 5px;
+        border: none;
+        border-radius: 10px;
+        background-color: #fff;
+        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #e6e6e6;
+    }
+
+
+    #equal {
+        width: 110px;
+        background-color: #4caf50;
+        color: #fff;
+    }
+
+    #equal:hover {
+        background-color: #388e3c;
+    }
+
+    .text {
+        width: 330px;
+        height: 20px;
+        font-size: 17px;
+        text-align: left;
+        margin: 5px auto;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        
+    }
+
+    #result {
+        background-color: #dadada;
+    }
+
+    #typing {
+        background-color: #fff;
+    }
+    #calculatrice {
+        width: 350px;
+        margin: 10px auto;
+        padding: 10px;
+        border:solid rgba(120, 117, 117, 0.2)
+    }
+    </style>
+</head>
+<body>
+    <h1>Calculatrice</h1>
+    <div id="calculatrice">
+        <p class="text" id="result"></p>
+        <p class="text" id="typing"></p>
+        <div>
+            <div class = "container">
+                <button onclick="baseCalculator.add(7);">7</button>
+                <button onclick="baseCalculator.add(8);">8</button>
+                <button onclick="baseCalculator.add(9);">9</button>
+                <button onclick="baseCalculator.add('/');">÷</button>
+                <button onclick="baseCalculator.remove()">🡠</button>
+                <button onclick="baseCalculator.clearText();">C</button>
+            </div>
+            <div class = "container">
+                <button onclick="baseCalculator.add(4);">4</button>
+                <button onclick="baseCalculator.add(5);">5</button>
+                <button onclick="baseCalculator.add(6);">6</button>
+                <button onclick="baseCalculator.add('*');">×</button>
+                <button onclick="baseCalculator.add('(');">(</button>
+                <button onclick="baseCalculator.add(')');">)</button>
+            </div>
+            <div class = "container">
+                <button onclick="baseCalculator.add(1);">1</button>
+                <button onclick="baseCalculator.add(2);">2</button>
+                <button onclick="baseCalculator.add(3);">3</button>
+                <button onclick="baseCalculator.add('-');">-</button>
+                <button style="visibility :hidden"></button>
+                <button style="visibility :hidden"></button>
+            </div>
+            <div class = "container">
+                <button onclick="baseCalculator.add(0);">0</button>
+                <button onclick="baseCalculator.add('.');">,</button>
+                <button onclick="baseCalculator.add('%');">%</button>
+                <button onclick="baseCalculator.add('+');">+</button>
+                <button id="equal" onclick="baseCalculator.calculate()">=</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        let baseCalculator = new BaseCalculator();
+    </script>
+</body>
+</html>
